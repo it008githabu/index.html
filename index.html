@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+        h2 {
+            color: #3498db;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 6px;
+            margin-top: 24px;
+        }
+        ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .link-box {
+            text-align: center;
+            margin-top: 24px;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="card">
+        <!-- 名前 -->
+        <h1>山田 太郎 (Taro Yamada)</h1>
+
+        <!-- プロフィール -->
+        <h2>プロフィール</h2>
+        <p>
+            はじめまして。Web開発や新しい技術を学ぶことが好きなエンジニアです。<br>
+            読みやすくメンテナンスしやすいコードを書くことを心がけています。
+        </p>
+
+        <!-- 趣味・好きなこと -->
+        <h2>趣味・好きなこと</h2>
+        <ul>
+            <li><strong>プログラミング:</strong> Webアプリの個人開発</li>
+            <li><strong>読書:</strong> 技術書やSF小説</li>
+            <li><strong>カフェ巡り:</strong> 美味しいコーヒーを探すこと</li>
+            <li><strong>旅行:</strong> 温泉に行ってリフレッシュすること</li>
+        </ul>
+
+        <!-- リンク -->
+        <h2>リンク</h2>
+        <div class="link-box">
+            <p>制作物やコードはGitHubで公開しています。</p>
+            <a href="https://github.com/your-username" class="btn" target="_blank" rel="noopener noreferrer">
+                GitHubプロフィールを見る
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
