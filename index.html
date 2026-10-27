@@ -1,97 +1,166 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介</title>
+    <title>プロフィールカード</title>
     <style>
+        /* 全体のレイアウト設定 */
         body {
-            font-family: sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333333;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
-        .card {
+
+        /* メインカード */
+        .profile-card {
             background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            max-width: 500px;
             width: 100%;
+            max-width: 520px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
         }
-        h1 {
-            color: #2c3e50;
+
+        /* ヘッダーエリア */
+        .card-header {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: #ffffff;
+            padding: 30px 24px;
             text-align: center;
+        }
+
+        .card-header h1 {
+            margin: 0;
             font-size: 1.6rem;
-            margin-top: 0;
+            letter-spacing: 0.5px;
         }
-        h2 {
-            color: #3498db;
+
+        .card-header p {
+            margin: 8px 0 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* コンテンツエリア */
+        .card-body {
+            padding: 28px 24px;
+        }
+
+        /* 各セクション */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
             font-size: 1.1rem;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 6px;
-            margin-top: 24px;
+            color: #4834d4;
+            margin: 0 0 12px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #f0f2f5;
+            padding-bottom: 8px;
         }
-        ul {
-            padding-left: 20px;
+
+        .section-content {
             line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555555;
         }
-        li {
-            margin-bottom: 6px;
+
+        /* ゲームリスト（タグ風UI） */
+        .game-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
         }
-        .link-box {
+
+        .game-tags li {
+            background-color: #f1f2f6;
+            color: #2f3542;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            border: 1px solid #eccc68;
+        }
+
+        /* リンクボタン */
+        .link-area {
             text-align: center;
-            margin-top: 24px;
+            margin-top: 10px;
         }
-        .btn {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
+
+        .github-btn {
+            display: inline-block;
+            background-color: #2f3542;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
-            transition: background-color 0.2s;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
         }
-        .btn:hover {
-            background-color: #2980b9;
+
+        .github-btn:hover {
+            background-color: #57606f;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- 名前 -->
-        <h1>山田 太郎 (Taro Yamada)</h1>
+    <div class="profile-card">
+        <!-- ヘッダー（名前） -->
+        <div class="card-header">
+            <h1>山田 太郎</h1>
+            <p>@your_id</p>
+        </div>
 
-        <!-- プロフィール -->
-        <h2>プロフィール</h2>
-        <p>
-            はじめまして。Web開発や新しい技術を学ぶことが好きなエンジニアです。<br>
-            読みやすくメンテナンスしやすいコードを書くことを心がけています。
-        </p>
+        <div class="card-body">
+            <!-- 自己紹介 -->
+            <div class="section">
+                <h2 class="section-title">💡 自己紹介</h2>
+                <p class="section-content">
+                    Web制作やプログラミングを勉強中です。<br>
+                    普段はコードを書いたり、好きなゲームをして過ごしています！
+                </p>
+            </div>
 
-        <!-- 趣味・好きなこと -->
-        <h2>趣味・好きなこと</h2>
-        <ul>
-            <li><strong>プログラミング:</strong> Webアプリの個人開発</li>
-            <li><strong>読書:</strong> 技術書やSF小説</li>
-            <li><strong>カフェ巡り:</strong> 美味しいコーヒーを探すこと</li>
-            <li><strong>旅行:</strong> 温泉に行ってリフレッシュすること</li>
-        </ul>
+            <!-- ゲーム紹介 -->
+            <div class="section">
+                <h2 class="section-title">🎮 プレイ中のゲーム</h2>
+                <ul class="game-tags">
+                    <li>🎮 ゲームタイトル A</li>
+                    <li>⚔️ ゲームタイトル B</li>
+                    <li>🧩 ゲームタイトル C</li>
+                </ul>
+            </div>
 
-        <!-- リンク -->
-        <h2>リンク</h2>
-        <div class="link-box">
-            <p>制作物やコードはGitHubで公開しています。</p>
-            <a href="https://github.com/your-username" class="btn" target="_blank" rel="noopener noreferrer">
-                GitHubプロフィールを見る
-            </a>
+            <!-- 趣味 -->
+            <div class="section">
+                <h2 class="section-title">🎨 趣味・好きなこと</h2>
+                <p class="section-content">
+                    プログラミング / 読書 / カフェ巡り
+                </p>
+            </div>
+
+            <!-- リンク -->
+            <div class="link-area">
+                <a href="https://github.com/your-username" class="github-btn" target="_blank" rel="noopener noreferrer">
+                    GitHub プロフィールを見る
+                </a>
+            </div>
         </div>
     </div>
 
